@@ -1,0 +1,7 @@
+.o_active {
+  color: lightgreen!important;
+}
+
+.o_active::after {
+  background-color: lightgreen!important;
+}

@@ -1,0 +1,19 @@
+.o_navigator_menu {
+  background-color: #111!important;
+  color: #ccc!important;
+}
+
+.o_menu-bar_title{
+  color: #ccc!important;
+}
+.o_menu-bar_title span:hover {
+  background: #333!important;
+}
+
+.o_active {
+  color: deeppink!important;
+}
+
+.o_active::after {
+  background-color: deeppink!important;
+}

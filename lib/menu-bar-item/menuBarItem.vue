@@ -6,7 +6,6 @@ const scrollTop = useScrollTop();
 
 defineProps<{ MenuItem: IMenuBarItem }>();
 
-
 </script>
 
 <template>
@@ -41,7 +40,7 @@ defineProps<{ MenuItem: IMenuBarItem }>();
 }
 
 .o_menu-bar_title span:hover {
-  background: #eee;
+  background-color: #eee;
 }
 
 .o_menu-bar_title[level="1"] {

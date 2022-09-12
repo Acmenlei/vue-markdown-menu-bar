@@ -6,7 +6,8 @@ import useMenuBarTitleConfigura from "./hooks/useMenuBarTitle"
 
 const { width, body } = defineProps<{
   body: string,
-  width: number | string
+  width: number | string,
+  menuTitle?: string
 }>();
 const emits = defineEmits(["MenuBarClick"])
 
@@ -23,7 +24,7 @@ function handlerClick(MenuItem: IMenuBarItem) {
   <div class="o_navigator_menu" :style="{
     width: typeof width === 'number' ? width + 'px' : width
   }">
-    <h3 class="o_menu_title">目录</h3>
+    <h3 class="o_menu_title">{{ menuTitle || "目录" }}</h3>
     <div class="o_menu_bar_container">
       <MenuBarItem v-for="MenuItem in oMenuBarTitleData" :MenuItem="MenuItem" @click.native="handlerClick(MenuItem)" />
     </div>
@@ -33,13 +34,13 @@ function handlerClick(MenuItem: IMenuBarItem) {
 <style scoped>
 .o_navigator_menu {
   color: #333;
-  background: #f8f8f8;
-  position: fixed;
-  right: 0;
-  top: 10px;
-  border-radius: 2px;
+  background: #fff;
+  border-radius: 5px;
   padding: 10px 10px;
   font-family: monospace, 'Courier New', Courier;
+  max-height: 100vh;
+  overflow-y: scroll;
+  box-shadow: 0 0 2px #ccc;
 }
 
 .o_navigator_menu .o_menu_title {
