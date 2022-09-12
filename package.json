@@ -1,0 +1,23 @@
+{
+  "name": "vue-markdown-menu-bar",
+  "version": "1.0.0",
+  "description": "一款基于Vue3的markdown动态生成侧边栏导航组件，开箱即用，持续维护...",
+  "main": "index.ts",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Acmenlei/vue-markdown-menu-bar.git"
+  },
+  "author": "coderlei",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Acmenlei/vue-markdown-menu-bar/issues"
+  },
+  "homepage": "https://github.com/Acmenlei/vue-markdown-menu-bar#readme",
+  "keywords": ["vue3", "markdown", "typescript", "menu", "menuBar", "article"]
+}
