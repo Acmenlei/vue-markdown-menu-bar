@@ -1,16 +1,31 @@
-# 基于Vue3的markdown动态生成侧边栏导航组件
-使用方式：
-1.全局注册
+## 介绍
+基于`Vue3 + ts`的动态生成侧边栏导航组件，开箱即用，需要注意的是，本插件暂不提供`markdown`解析功能(后续可能会添加)，需要您进行解析后将`html`所在的容器传递给我，详情请见`VueMarkdownMenuBar`组件`Props`说明。
+
+## 安装
+```shell
+npm install vue-markdown-menu-bar
+```
+or
+```shell
+yarn add vue-markdown-menu-bar
+```
+or
+```shell
+pnpm install vue-markdown-menu-bar
+```
+
+## 使用：
+1.全局注册(main.ts)
 ```ts
 import VueMarkdownMenuBar from "vue-markdown-menu-bar"
-
 createApp(App).use(VueMarkdownMenuBar).mount('#app')
 ```
 
-2.vue文件中单独引入：
+2.vue文件中单独引入(xxx.vue)：
+
 ```html
 <script setup lang="ts">
-import { VueMarkdownMenuBar } from "vue-markdown-menu-bar"
+  import { VueMarkdownMenuBar } from "vue-markdown-menu-bar"
 </script>
 ```
 3.在模板中使用
@@ -33,9 +48,23 @@ import { VueMarkdownMenuBar } from "vue-markdown-menu-bar"
     <p>25</p>
     <p>26</p>
   </div>
-  <VueMarkdownMenuBar body=".body" />
+  <VueMarkdownMenuBar body=".body" width="200px"/>
 </template>
 ```
+## VueMarkdownMenuBar组件Props：
+
+| property name | type             | default value | meaning                                                      |
+| ------------- | ---------------- | ------------- | ------------------------------------------------------------ |
+| body          | String           | 必须传递      | 需要解析的HTML容器，请传递 class 或 id                       |
+| width         | String ｜ Number | 必须传递      | 设置整个VueMarkdownMenuBar容器的宽度，可以为百分比，也可为数值 |
+
+## VueMarkdownMenuBar组件Events：
+
+| event Name    | parmas                                                       | meaning                                     |
+| ------------- | ------------------------------------------------------------ | ------------------------------------------- |
+| @MenuBarClick | 该钩子函数拥有一个对象参数，你可以获取到它们：当前点击的MenuBarItem | 点击导航栏之后你可以获取到点击的MenuBarItem |
+
 
 ## 后续
-有需求的可以给我提Pr，也可以一起来维护这个组件，联系方式wx：x972761675
+
+对该组件有需求的可以给我提PR，也可以一起来维护这个组件，联系方式`wechat：x972761675`

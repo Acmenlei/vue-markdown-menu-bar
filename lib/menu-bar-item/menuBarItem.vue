@@ -1,6 +1,5 @@
 <script setup lang='ts'>
 import { IMenuBarItem } from "../../types"
-import { scrollTo } from "../../utils"
 import useScrollTop from "./hooks/useScrollTop"
 
 const scrollTop = useScrollTop();
@@ -11,7 +10,7 @@ defineProps<{ MenuItem: IMenuBarItem }>();
 </script>
 
 <template>
-  <div class="o_menu-bar_title" :level="MenuItem.level" @click="scrollTo(MenuItem.offset)">
+  <div class="o_menu-bar_title" :level="MenuItem.level">
     <span :class="{o_active: scrollTop >= MenuItem.offset && scrollTop < MenuItem.offsetMax}">
       标题{{ MenuItem.title + MenuItem.title }}
     </span>
@@ -19,10 +18,6 @@ defineProps<{ MenuItem: IMenuBarItem }>();
 </template>
 
 <style scoped>
-:root {
-  --active-color: rgb(0, 127, 255)
-}
-
 .o_menu-bar_title {
   cursor: pointer;
   overflow: hidden;

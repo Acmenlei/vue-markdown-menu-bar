@@ -1,29 +1,37 @@
 <script setup lang='ts'>
+import { IMenuBarItem } from "../../types";
+import { scrollTo } from "../../utils";
 import MenuBarItem from "../menu-bar-item/MenuBarItem.vue"
 import useMenuBarTitleConfigura from "./hooks/useMenuBarTitle"
 
-const props = defineProps({
-  body: {
-    type: String,
-    required: true
-  }
-})
+const { width, body } = defineProps<{
+  body: string,
+  width: number | string
+}>();
+const emits = defineEmits(["MenuBarClick"])
 
-const oMenuBarTitleData = useMenuBarTitleConfigura(props.body);
+const oMenuBarTitleData = useMenuBarTitleConfigura(body);
+
+function handlerClick(MenuItem: IMenuBarItem) {
+  scrollTo(MenuItem.offset);
+  emits("MenuBarClick", MenuItem);
+}
+
 </script>
 
 <template>
-  <div class="o_navigator_menu">
+  <div class="o_navigator_menu" :style="{
+    width: typeof width === 'number' ? width + 'px' : width
+  }">
     <h3 class="o_menu_title">目录</h3>
     <div class="o_menu_bar_container">
-      <MenuBarItem v-for="MenuItem in oMenuBarTitleData" :MenuItem="MenuItem" />
+      <MenuBarItem v-for="MenuItem in oMenuBarTitleData" :MenuItem="MenuItem" @click.native="handlerClick(MenuItem)" />
     </div>
   </div>
 </template>
 
 <style scoped>
 .o_navigator_menu {
-  width: 220px;
   color: #333;
   background: #f8f8f8;
   position: fixed;

@@ -7,6 +7,5 @@ export default {
   }
 }
 
-export {
-  VueMarkdownMenuBar
-}
+export { VueMarkdownMenuBar }
+export * from "./types"

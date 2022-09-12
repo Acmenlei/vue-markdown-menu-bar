@@ -28,6 +28,7 @@ function dfs(menus: Array<IMenuBarItem>, node: HTMLElement, level: number) {
     oMenuItem.title = node.textContent + "";
     oMenuItem.level = +tagName[1];
     oMenuItem.offset = getMenuItemOffset(node);
+    oMenuItem.target = node;
 
     menus.push(oMenuItem);
   } else {

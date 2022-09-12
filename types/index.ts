@@ -3,4 +3,5 @@ export interface IMenuBarItem {
   title: string;
   offset: number;
   offsetMax: number;
+  target: HTMLElement;
 }
