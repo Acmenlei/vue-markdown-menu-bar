@@ -1,6 +1,6 @@
 {
   "name": "vue-markdown-menu-bar",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "一款基于Vue3的markdown动态生成侧边栏导航组件，开箱即用，持续维护...",
   "main": "index.ts",
   "directories": {
