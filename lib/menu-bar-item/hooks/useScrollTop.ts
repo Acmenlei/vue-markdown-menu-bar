@@ -1,4 +1,5 @@
 import { onMounted, ref } from "vue";
+import { debounce } from "../../../utils";
 
 export default function useScrollTop() {
   const scrollTop = ref(0);
@@ -10,15 +11,4 @@ export default function useScrollTop() {
   })
 
   return scrollTop;
-}
-
-function debounce(cb: Function, delay: number) {
-  let timer: any = null;
-  return function (this: any, ...args: any[]) {
-    const _this = this;
-    clearTimeout(timer);
-    timer = setTimeout(() => {
-      cb.apply(_this, args);
-    }, delay)
-  }
 }

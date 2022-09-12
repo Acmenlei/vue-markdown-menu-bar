@@ -31,3 +31,15 @@ export function scrollTo(targetTop: number = 0) {
   }
   scrollHelper();
 }
+
+
+export function debounce(cb: Function, delay: number) {
+  let timer: any = null;
+  return function (this: any, ...args: any[]) {
+    const _this = this;
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      cb.apply(_this, args);
+    }, delay)
+  }
+}
