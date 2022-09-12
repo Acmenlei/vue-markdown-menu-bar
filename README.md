@@ -64,7 +64,38 @@ createApp(App).use(VueMarkdownMenuBar).mount('#app')
 | ------------- | ------------------------------------------------------------ | ------------------------------------------- |
 | @MenuBarClick | 该钩子函数拥有一个对象参数，你可以获取到它们：当前点击的MenuBarItem | 点击导航栏之后你可以获取到点击的MenuBarItem |
 
-
+## 可选主题色
+- dark
+- lightgreen
+> 只需引入styles文件夹中的样式文件，如下：
+```js
+import "vue-markdown-menu-bar/styles/dark.css";
+```
+## 自定义主题色
+你也可以根据类名来自定主题色，可以去参考对应样式文件中的写法，以下提供几个容器类名供样式修改
+```css
+<!--这是包裹整个menuBar的外层容器 -->
+.o_navigator_menu {
+  background-color: #111!important;
+  color: #ccc!important;
+}
+<!--这是menuBar容器的标题 -->
+.o_menu-bar_title{
+  color: #ccc!important;
+}
+<!--这是menuBar容器的内部导航项的hover效果 -->
+.o_menu-bar_title span:hover {
+  background: #333!important;
+}
+<!--对当前活跃的导航项设置样式 -->
+.o_active {
+  color: deeppink!important;
+}
+<!--对当前活跃的导航项左侧指示器设置样式 -->
+.o_active::after {
+  background-color: deeppink!important;
+}
+```
 ## 后续
 
 对该组件有需求的可以给我提PR，也可以一起来维护这个组件，联系方式`wechat：x972761675`
