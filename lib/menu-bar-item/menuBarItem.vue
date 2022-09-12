@@ -12,7 +12,7 @@ defineProps<{ MenuItem: IMenuBarItem }>();
 <template>
   <div class="o_menu-bar_title" :level="MenuItem.level">
     <span :class="{o_active: scrollTop >= MenuItem.offset && scrollTop < MenuItem.offsetMax}">
-      标题{{ MenuItem.title + MenuItem.title }}
+      {{ MenuItem.title}}
     </span>
   </div>
 </template>
