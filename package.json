@@ -19,5 +19,18 @@
     "url": "https://github.com/Acmenlei/vue-markdown-menu-bar/issues"
   },
   "homepage": "https://github.com/Acmenlei/vue-markdown-menu-bar#readme",
-  "keywords": ["vue3", "markdown", "typescript", "menu", "menuBar", "article"]
+  "keywords": [
+    "vue3",
+    "vue-menu-bar",
+    "markdown-menu",
+    "vue-markdown-menu",
+    "markdown-menu-bar",
+    "markdown-bar",
+    "vue-markdown-bar",
+    "markdown",
+    "typescript",
+    "menu",
+    "menuBar",
+    "article"
+  ]
 }
