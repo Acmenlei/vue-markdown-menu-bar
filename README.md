@@ -1,3 +1,19 @@
+<div align="center">
+	<h3>vue-markdown-menu-bar</h3>
+	<p align="center">
+	    <a href="https://vuejs.org/" target="_blank">
+	        <img src="https://img.shields.io/badge/vue.js-vue3.x-green" alt="vue">
+	    </a>
+		<a href="https://www.tslang.cn/" target="_blank">
+	        <img src="https://img.shields.io/badge/typescript-%3E4.0.0-blue" alt="typescript">
+	    </a>
+    <a href="https://github.com/Acmenlei/vue-markdown-menu-bar.git" target="_blank">
+	        <img src="https://img.shields.io/badge/markdown-menu-yellow" alt="markdown-menu">
+	    </a>
+	</p>
+	<p>&nbsp;</p>
+</div>
+
 ## 介绍
 基于`Vue3 + ts`的动态生成侧边栏导航组件，开箱即用，需要注意的是，本插件暂不提供`markdown`解析功能(后续可能会添加)，需要您进行解析后将`html`所在的容器传递给我，详情请见`VueMarkdownMenuBar`组件`Props`说明。
 
