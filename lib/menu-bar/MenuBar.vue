@@ -39,8 +39,7 @@ function handlerClick(MenuItem: IMenuBarItem) {
   padding: 10px 10px;
   font-family: monospace, 'Courier New', Courier;
   max-height: 100vh;
-  overflow-y: scroll;
-  box-shadow: 0 0 2px #ccc;
+  overflow: auto;
 }
 
 .o_navigator_menu .o_menu_title {
