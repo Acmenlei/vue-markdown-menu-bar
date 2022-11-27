@@ -17,13 +17,8 @@ defineProps<{ MenuItem: IMenuBarItem }>();
 </template>
 
 <style scoped>
-.o_menu-bar_title {
+.o_menu-bar_title{
   cursor: pointer;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
   font-size: 14px;
   width: 100%;
   position: relative;
@@ -33,6 +28,9 @@ defineProps<{ MenuItem: IMenuBarItem }>();
 
 .o_menu-bar_title span {
   display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   text-align: left;
   padding: 5px 10px;
   border-radius: 5px;
